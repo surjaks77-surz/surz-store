@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="asset/image/surz.ico">
+    <title>SURZ STORE - Trusted Gaming Accounts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/style/app.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="asset/image/surz store logo fix.png" alt="SURZ STORE Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#catalog" class="nav-link">Katalog Akun</a></li>
+                <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+            </ul>
+            <a href="#catalog" class="cta-btn">Lihat Stok</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION: Dibuat langsung fokus ke jual akun -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <h1>Dapatkan Akun Game Impianmu di <span>SURZ STORE</span></h1>
+            <p>Penyedia akun game premium dan siap pakai terpercaya. Proses aman, legal, dan bergaransi penuh.</p>
+            <div class="hero-buttons">
+                <a href="#catalog" class="cta-btn">Lihat Katalog</a>
+                <a href="https://wa.me/628563581933" target="_blank" class="secondary-btn"><i
+                        class="fa-brands fa-whatsapp"></i> Hubungi Admin</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="asset/image/surz store logo fix.png" alt="SURZ STORE Digital Logo" class="hero-logo">
+        </div>
+    </section>
+
+    <!-- CATALOG/SERVICES SECTION: Diubah jadi fokus ke kategori game -->
+    <section class="services" id="catalog">
+        <div class="section-title">
+            <h2>Katalog Akun Game</h2>
+            <p>Pilih kategori game yang anda cari untuk melihat detail stok yang tersedia</p>
+        </div>
+        <div class="services-grid">
+            <!-- Game 1 -->
+            <div class="service-card"
+                onclick="openModal('Akun Game Mobile', 'Tersedia berbagai pilihan akun Mobile Legends siap pakai. ada akun Diablo Immortal, Grand Summoners, hingga akun smurf dengan harga terjangkau.')">
+                <div class="service-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3>Mobile Games</h3>
+                <p>Akun Diablo Immortal & Grand Summoners spesifikasi oke, dengan jaminan 100% aman & bisa change email.
+                </p>
+                <span class="read-more">Lihat Detail Akun &rarr;</span>
+            </div>
+            <!-- Game 2 -->
+            <div class="service-card"
+                onclick="openModal('Akun Game PC', 'Menyediakan akun untuk game PC populer seperti ZZZ, Honkai Star Rail, Genshin Impact, atau game lainnya. Semua akun telah melalui proses pengecekan ketat agar aman dari hack-back.')">
+                <div class="service-icon">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <h3>PC Games</h3>
+                <p>Jual akun ZZZ, Genshin Impact, Honkai Star Rail, dan game populer lainnya dengan riwayat bersih.</p>
+                <span class="read-more">Lihat Detail Akun &rarr;</span>
+            </div>
+            <!-- Benefit/Garansi Keamanan -->
+            <div class="service-card"
+                onclick="openModal('Jaminan Garansi Aman', 'Semua transaksi akun di SURZ STORE dilengkapi dengan jaminan data aman (Change Email). Kami memberikan panduan penuh cara mengamankan akun setelah dibeli agar terhindar dari masalah.')">
+                <div class="service-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>100% Aman & Bergaransi</h3>
+                <p>Proses serah terima akun transparan, dibantu sampai tuntas, dan jaminan anti hack-back.</p>
+                <span class="read-more">Baca Syarat Garansi &rarr;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL POP-UP (Tetap dipertahankan untuk detail spek akun/kategori) -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Kategori Akun</h2>
+            <p id="modalDescription">Detail stok atau penjelasan keamanan akun.</p>
+            <button id="modalOrderBtn" class="cta-btn" onclick="orderViaWhatsApp()">Tanyakan Stok via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION SIMPEL -->
+    <section class="services" id="about" style="background: transparent; padding-top: 0;">
+        <div class="section-title">
+            <h2>Kenapa SURZ STORE?</h2>
+            <p>Kami fokus memberikan layanan jual akun game yang cepat, transparan, dan mengutamakan keamanan data
+                pembeli di atas segalanya.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="asset/image/surz store logo fix.png" alt="SURZ STORE" class="logo-img">
+                <p>SURZ STORE - Tempat terpercaya untuk transaksi dan jual akun game di Indonesia.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/xaviersurzzz" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@javiersurz77" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/628563581933" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <!-- Tambahkan ini di dalam footer-container, tepat di bawah atau di samping footer-socials -->
+
+            <div class="footer-marketplace">
+                <h4>Trusted Seller On</h4>
+                <div class="marketplace-list">
+                    <!-- Ganti href dengan link toko asli milik lu -->
+                    <a href="https://www.g2g.com/javiersurz" target="_blank" class="mkt-link">
+                        <span class="mkt-item"><i class="fa-solid fa-store"></i> G2G</span>
+                    </a>
+                    <a href="https://www.eldorado.gg/users/xaviersurz/shop/Currency" target="_blank" class="mkt-link">
+                        <span class="mkt-item"><i class="fa-solid fa-store"></i> El Dorado</span>
+                    </a>
+                    <a href="https://gameboost.com/seller/xaviersurz" target="_blank" class="mkt-link">
+                        <span class="mkt-item"><i class="fa-solid fa-store"></i> GameBoost</span>
+                    </a>
+                    <a href="https://zeusx.com/seller/xaviersurz-1037414" target="_blank" class="mkt-link">
+                        <span class="mkt-item"><i class="fa-solid fa-store"></i> ZeusX</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SURZ STORE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
